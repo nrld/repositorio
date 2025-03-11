@@ -1,0 +1,155 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos cabecera */
+
+/* Header */
+
+.header {
+    background-color: rgb(30, 30, 30);
+    padding: 20px;
+    text-align: center;
+}
+
+#titulo {
+    font-family: 'Georgia', serif;
+    color: rgb(0, 0, 0);
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: purple;
+}
+
+/* Proyectos */
+
+#proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.proyecto {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px;
+    margin: 20px;
+    transition: opacity 0.3s;
+}
+
+.proyecto img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.proyecto:hover img {
+    opacity: 0.5;
+}
+
+.proyecto::first-letter {
+    font-size: 24px;
+    color: red;
+}
+
+.proyecto:nth-child(3n) {
+    background-color: lightgray;
+}
+
+.destacado {
+    background-color: yellow;
+}
+
+/* Formulario de Contacto */
+
+#contacto form {
+    max-width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contacto input[type="email"] {
+    border-color: green;
+}
+
+#contacto textarea:focus {
+    outline: 2px solid blue;
+}
+
+/* Footer */
+.footer {
+    background: url('textura.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.footer .mensaje-secreto {
+    display: none;
+}
+
+.footer p {
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+
+.footer a {
+    color: red;
+    text-decoration: underline;
+}
+
+.boton-subir {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .proyecto {
+        width: 100%;
+    }
+}
